@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lalezar'
+}
+
+.header {
+    background: #630A0A;
+
+    height: 15vh;
+    display: flex;
+
+
+}
+
+.logo {
+    flex-grow: 0;
+    height: auto;
+}
+
+.membrete {
+    align-self: center;
+    flex-grow: 1;
+}
+
+.membrete h1 {
+    line-height: 3rem;
+    font-size: 20px;
+    color: white;
+    
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    flex-grow: 3;
+    
+    font-size: 20px;
+    padding-left: 7rem;
+
+}
+
+.titulo h1{
+    font-size: 25px;
+    background: #630A0A;
+    vertical-align: middle;
+    color: white;
+    font-family: 'Lalezar';
+}
+.redirect{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.redirect a{
+    background: black;
+    text-align: center;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 5px;
+    border-radius: 15px;
+}
+
+
+.content{
+    background: url("../USB.jpg") no-repeat center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario{
+    font-family: 'Lalezar';
+    display: flex;
+    background: #8d1c2980;
+    backdrop-filter: blur(0.4rem);
+    flex-direction: column;
+    border-radius: 40px;
+    border: 2px solid rgba(141, 28, 41, 0.20);
+    width:400px ;
+    height: auto;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.formulario h2{
+    color: white;
+}
+
+.input-text{
+    font-family: 'Lalezar';
+    width: 350px;
+    font-size: 20px;
+    background: white;
+    border-radius: 40px;
+    border: none;
+    height: 40px;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.boton{
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    border: none;
+    border-radius: 40px;
+    font-family: 'Lalezar';
+    color: white;
+    background: #b10a0a;
+
+}
