@@ -1,7 +1,8 @@
 const express = require('express');
 const path =  require('path');
-const engine = require('ejs')
-const morgan = require('morgan')
+const cookieParser = require('cookie-parser');
+const morgan = require('morgan');
+
 const app = express();
 
 //setings
@@ -11,9 +12,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'views')))
 app.use(morgan('dev'))
-//database
+//midleware
 require('./database')
-
+app.use(cookieParser())
 
 //routers
 app.use('/', require('./routes/router'));

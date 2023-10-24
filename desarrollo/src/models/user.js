@@ -4,7 +4,10 @@ const bcrypt = require('bcrypt-nodejs');
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-    cedula: String,
+    cedula: {
+        type: String,
+        unique: true
+    },
     password: String,
     nombre: String,
     rol: String,
@@ -12,7 +15,7 @@ const userSchema = new Schema({
 });
 
 userSchema.methods.encryptPassword = (password) => {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(15))
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(10))
 }
 
 

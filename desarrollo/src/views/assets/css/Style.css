@@ -6,11 +6,8 @@ body {
 
 .header {
     background: #630A0A;
-
     height: 15vh;
     display: flex;
-
-
 }
 
 .logo {
@@ -27,33 +24,34 @@ body {
     line-height: 3rem;
     font-size: 20px;
     color: white;
-    
 }
 
 .titulo {
     display: flex;
     align-items: center;
     flex-grow: 3;
-    
     font-size: 20px;
     padding-left: 7rem;
-
+    right: 50%;
+    top: 50%;
 }
 
-.titulo h1{
+.titulo h1 {
     font-size: 25px;
     background: #630A0A;
     vertical-align: middle;
     color: white;
     font-family: 'Lalezar';
+    
 }
-.redirect{
+
+.redirect {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.redirect a{
+.redirect a {
     background: black;
     text-align: center;
     padding: 15px;
@@ -64,8 +62,7 @@ body {
     border-radius: 15px;
 }
 
-
-.content{
+.content {
     background: url("../USB.jpg") no-repeat center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -76,7 +73,7 @@ body {
     align-items: center;
 }
 
-.formulario{
+.formulario {
     font-family: 'Lalezar';
     display: flex;
     background: #8d1c2980;
@@ -84,17 +81,17 @@ body {
     flex-direction: column;
     border-radius: 40px;
     border: 2px solid rgba(141, 28, 41, 0.20);
-    width:400px ;
+    width: 400px;
     height: auto;
     padding: 25px;
     justify-content: center;
     align-items: center;
 }
-.formulario h2{
+.formulario h2 {
     color: white;
 }
 
-.input-text{
+.input-text {
     font-family: 'Lalezar';
     width: 350px;
     font-size: 20px;
@@ -106,7 +103,7 @@ body {
     margin-bottom: 30px;
 }
 
-.boton{
+.boton {
     font-size: 20px;
     height: 60px;
     width: 150px;
@@ -115,5 +112,351 @@ body {
     font-family: 'Lalezar';
     color: white;
     background: #b10a0a;
+}
 
+/* ------------ Logo centrado ---------- */
+
+.centered-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* --------- Botones de Inicio Estudiantes -------- */
+
+.botones-container {
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boton {
+    margin-bottom: 20px;
+    background-color: #630A0A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+/* --------- Botones de Inicio Docentes -------- */
+
+.botones-container2 {
+    position: absolute;
+    top: 300px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.boton {
+    margin-bottom: 20px;
+    background-color: #630A0A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+/* ------------------ CheckBox Recuerdame ----------- */
+
+.checkbox-recuerdame {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -220px; 
+}
+
+.checkbox {
+    margin-right: 5px;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.3); 
+    
+}
+
+label[for="remember-me"] {
+    font-size: 21px; 
+    color: #000000;
+}
+
+/*---------- Barra gris del final ------*/
+.footer {
+    background: #646363;
+    color: white;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+/*------- Texto al lado del menu --------*/
+
+.texto-centrado {
+    position: fixed;
+    top: 200px;
+    right: 1025px; 
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+    font-size: 24px;
+    margin: 0;
+    align-items: center;
+    white-space: nowrap;
+    z-index: 4;
+    
+}
+
+/*------------------ Este es el menu (Revisar para la base de datos) ------------- */
+
+.menu {
+    text-align: center;
+    position: relative;
+    flex-direction: row;
+    gap: 20px;
+    top: 20px;
+    z-index: 3;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-btn {
+    background-color: #630a0aab;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 22px;
+}
+.menu-options {
+    display: none;
+    list-style: none;
+    padding: 0;
+    background-color: #363535d3; 
+    border-radius: 30px; 
+    z-index: 3;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-options li {
+    margin: 0;
+    border-bottom: 1px solid transparent;
+}
+
+.menu-options a {
+    text-decoration: none;
+    color: #f7f7f7;
+    font-size: 22px;
+    display: block;
+    padding: 10px 0;
+}
+
+.menu-options a:hover {
+    color: #007BFF;
+}
+
+.menu-content {
+    justify-content: center;
+    align-items: center;
+    position: row;
+    display: flex;
+    padding-bottom: .5rem;
+}
+
+.menu-content:hover  .menu-options {
+    display: block;
+}
+
+/*---------- Boton para volver al inicio ---------*/
+
+.inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px; 
+    right: 20px; 
+    background-color: #630A0A;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    font-size: 19px;
+    z-index: 3;
+}
+
+.inicio:hover {
+    background-color: #b10a0a;
+}
+
+/*-------- Rectangulo de seleccion de inscripcion ---------*/
+
+.rectanguloseleccion2 {
+    background-color: #5c5b5b77; 
+    height: 60%; 
+    width: 50%; 
+    position: fixed; 
+    top: calc(20% + 20px); 
+    left: 500px;
+    right: 500px;
+    border-radius: 30px;
+    z-index: 1;
+    padding: 30px;
+    color: #020202; 
+    font-size: 20px;
+}
+
+.rectanguloseleccion2 p {
+    margin: 0; 
+}
+
+.rectanguloseleccion2 p span {
+    margin-right: 200px; 
+}
+
+.separador {
+    border-top: 2px solid #000000fa; 
+    margin-top: 20px; 
+    margin-bottom: 30px; 
+}
+
+
+/*---------------- Rectangulo de registrar ----------*/
+
+.formulario-registrar {
+    font-family: 'Lalezar';
+    display: flex;
+    background: #8d1c2980;
+    backdrop-filter: blur(0.4rem);
+    flex-direction: column;
+    border-radius: 40px;
+    border: 2px solid rgba(141, 28, 41, 0.20);
+    width: 500px;
+    height: auto;
+    padding: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-registrar h2 {
+    top: 30px;
+    color: #000000;
+}
+
+.formulario-registrar input[type="text"],
+.formulario-registrar input[type="password"],
+.formulario-registrar input[type="email"] {
+    font-size: 20px;
+    width: 90%;
+    margin-bottom: 20px; 
+}
+
+.formulario-registrar .input-wide {
+    width: 90%; 
+}
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-container input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+    width: 100px;
+}
+
+.input-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.input-container2 input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background-color: white;
+    text-align: center;
+    width: 100px;
+}
+
+/*---------- Panel Usuario -------------*/
+
+.panel {
+    position: absolute;
+    width: 195px;
+    height: 50px; 
+    left: 88%;
+    top: 40px;
+}
+
+.rectangulo11 {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    background: #8D1818;
+    border: 1px solid #841414;
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 5px;
+}
+
+.usuario {
+    flex-grow: 1; 
+    padding: 10px; 
+    font-family: 'Lalezar';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.imagen {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px; 
 }
