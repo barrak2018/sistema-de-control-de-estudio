@@ -18,13 +18,28 @@
         <div class="titulo">
             <h1>Sistema de Control de Estudios para Estudiantes</h1>
         </div>
+        <div class="Component1">
+            <% if (mat.length == 0 || !mat) {%>
+                <div class="carta">
+                    <strong>no hay materias inscritas</strong>
+                    
+                </div>
+            <%}%>
+            <% mat.forEach(elemnt => {%>
+                <div class="carta">
+                    <strong><%=  elemnt.nombre  %></strong>
+                    <div>Seccion: <%= elemnt.seccion %> </div>
+                </div>
+            <%})%>
+            
+        </div>
     </div>
     <div class="botones-container">
-        <a href="../Estudiantes/Estudiantes-2.Seleccione Carrera.html" class="boton">Inscripcion</a>
-        <a href="/profile/materias" class="boton">Asignaturas</a>
-        <a href="#" class="boton">Horarios</a>
+        <a href="/profile" class="boton">Inicio</a>
+        <a href="#" class="boton">Calificaciones</a>
+        <!-- <a href="#" class="boton">Horarios</a> -->
         <a href="#" class="boton">Datos Personales</a>
-        <a href="#" class="boton">Oferta Academica</a>
+        <!-- <a href="#" class="boton">Oferta Academica</a> -->
     </div>
     <img class="centered-logo" src="../assets/logo.png" alt="logo de la pagina" style="opacity: 0.5;">>
     <div class="footer">

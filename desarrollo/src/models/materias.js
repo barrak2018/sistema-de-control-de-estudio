@@ -7,6 +7,7 @@ const materiaSchema =new Schema({
         type: String
     },
     horario: String,
-    docente: String
+    docente: String,
+    estudiantes: [String]
 });
 module.exports = mongoose.model('Materia', materiaSchema);

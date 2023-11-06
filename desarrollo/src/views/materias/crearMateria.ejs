@@ -15,6 +15,25 @@
     <h1>
         <%= status %>
     </h1>
+    <br>
+    <table>
+        <thead>
+            <th scope="col">nombre</th>
+            <th scope="col">Seccion</th>
+            <th scope="col">Usuario</th>
+        </thead>
+        <tbody>
+            <% lista.forEach(materias =>{%>
+                <tr>
+                    <td><%= materias.nombre %></td>
+                    <td><%= materias.seccion %></td>
+                    <td><%= materias.horario %></td>
+                </tr>
+            <%}) %>
+            
+        </tbody>
+
+    </table>
 </form>
 </body>
 </html>

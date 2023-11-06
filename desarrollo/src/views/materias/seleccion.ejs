@@ -1,0 +1,9 @@
+<form action="/administracion/materias/inscribir/seleccion" method="post">
+    <select name="mSelected" id="">
+        
+            <%materias.forEach(materia => {%>
+            <option value="<%= materia.id %>"><%= materia.nombre %> | <%= materia.seccion %></option>
+            <%})%>
+        </select>
+        <button type="submit">enviar</button>
+    </form>
