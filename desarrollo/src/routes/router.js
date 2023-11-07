@@ -31,7 +31,7 @@ router.post('/login',async(req, res)=>{
     }else{
         const consulta = bcrypt.compareSync(password, user.password)
         if (consulta == true){
-            res.cookie('id', `${user.id}`, {maxAge: 1000 * ((60 * 60)* 1)})
+            res.cookie('id', `${user.id}`, {maxAge: 1000 * 120})
             res.redirect('/profile')
         }
         else {
@@ -60,7 +60,7 @@ router.get('/profile', async(req, res)=>{
     }
 })
 
-
+// gestion de materias del perfil
 router.get('/profile/materias', async(req, res)=>{
     if (!req.cookies.id){
         res.redirect('/')
@@ -72,12 +72,9 @@ router.get('/profile/materias', async(req, res)=>{
             const ar = await Promise.all(consulta.map(async element => {
                 return Materia.findById(element.idMateria);
             }));
-
-
-
             console.log(ar);
-            
             res.render('estudiantes/materias', {username: user.nombre, mat: ar});
+
         }else if (user.rol == 'admin'){
             console.log('inicio de sesion '+ user.nombre + ", " + user.rol);
             res.render('admin/inicio', {username: user.nombre});
@@ -154,13 +151,13 @@ router.post('/administracion/materias/crear',async (req, res)=>{
         try {
             await newMateria.save();
             console.log("materia creada...");
-            res.cookie("status", "materia creada correctamente")
+            res.cookie("status", "materia creada correctamente", {maxAge: 5000})
             res.redirect("/administracion/materias/crear")
         } catch (error) {
             
             console.log("error en la carga de la materia");
             res.cookie("status", "error al cargar la materia")
-            res.redirect("/administracion/materias/crear")
+            res.redirect("/administracion/materias/crear", {maxAge: 5000})
         }
         
     }else{
